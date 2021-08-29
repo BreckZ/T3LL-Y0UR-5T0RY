@@ -1,5 +1,5 @@
 # T3LL-Y0UR-5T0RY
-Allows the user to build a numerological profile and let the numbers speak 
+Allows the user to build a numerological profile and let the numbers speak about it.
 
 # Songwriter-Bible
 A tool to help write a song.
