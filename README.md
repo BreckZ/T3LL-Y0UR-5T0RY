@@ -55,7 +55,7 @@ Mobile Design - https://imgur.com/KgKc1bQ
 |Sep 3| Presentations | Incomplete
 
 ## Priority Matrix
-
+See following link https://imgur.com/GFj5v5E
 
 ## Timeframes
 
