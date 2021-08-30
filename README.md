@@ -7,7 +7,7 @@ This application will take the user through a profile building exercise.  During
 
 ## API and Data Sample
 
-Numbers API returns data arrays with trivial or factual information based on the parameter entered by the user.  In this example, the request returns an array of songs.  
+Numbers API returns data arrays with trivial or factual information based on the parameter entered by the user.  In this example, the request returns a random text with the trivia key.  
 
 i.e. numbersapi.com/8/year?json
 ```
