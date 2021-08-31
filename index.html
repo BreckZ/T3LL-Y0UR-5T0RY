@@ -6,35 +6,52 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script defer src="index.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="app.js"></script>
   <title>Document</title>
 </head>
 
 <body>
-  <div class="split left">
-    <div class="left-sec" id="left-1">
-      <div class="portrait"></div>
-    </div>
+  <div id="container">
 
-    <div class="left-sec" id="left-2">
-      <h2>Age</h2>
-      <input id="age"></input>
+    <div class="left">
+      <!-- LEFT SIDE -->
+
+      <h2 id="age-btn">Age</h2>
+      <input type="text" id="age" placeholder="years"></input>
       <h2>Birth Date</h2>
-      <input></input>
+      <input type="text" id="bmth" placeholder="month"></input>
+      <input type="text" id="bday" placeholder="day"></input>
+      <h2>Birth Year</h2>
+      <input type="text" id="byear" placeholder="year"></h2>
+      <h2>Height</h2>
+      <input type="text" id="hft" placeholder="ft."></input>
+      <input type="text" id="hin" placeholder="in."></input>
+      <h2>Weight</h2>
+      <input type="text" id="lbs" placeholder="lbs. (optional)"></input>
+      <h2>Shoe Size</h2>
+      <input type="text" id="shoe" placeholder="in."></input>
+      <h2>Favorite Number</h2>
+      <input type="text" id="favNum" placeholder="#"></input>
+      <h2>Numerological Curiosity</h2>
+      <input type="text" id="choose" placeholder="#"></input>
+
     </div>
-    <div class="left-sec" id="left-3"></div>
-    <div class="left-sec" id="left-4"></div>
-    <div class="left-sec" id="left-5"></div>
-
-  </div> <!--left-container end-->
-
-  <div class="split right">
-
-
-  </div> <!--right-container end-->
+    <!-- LEFT SIDE END -->
 
 
 
+
+
+    <div class="right">
+
+
+
+
+      <!--right-container end-->
+    </div>
+
+  </div>
 </body>
 
 </html>
