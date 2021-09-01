@@ -110,7 +110,7 @@ function handleInput(e) {
 
 
 
-const rightBox = document.querySelector(".right");
+const rightBox = document.querySelector(".right");        // if there is already an element in HTML you can use global scope
 
 
 function displayResults(output, category) {
@@ -118,17 +118,17 @@ function displayResults(output, category) {
   div.classList.add("outputBox");
   rightBox.append(div);
 
-  let outputBox = document.querySelector(".outputBox");
+  // let outputBox = document.querySelector(".outputBox");   // if you are appending to the DOM make the scope local
 
   let p1 = document.createElement("p");
   p1.classList.add("title");
   p1.innerText = `${category}:`;
-  outputBox.append(p1);
+  div.append(p1);
 
   let p2 = document.createElement("p");
   p2.classList.add("output")
   p2.innerText = `${output}`;
-  outputBox.append(p2);
+  div.append(p2);
 }
 
 function removeOuput() {

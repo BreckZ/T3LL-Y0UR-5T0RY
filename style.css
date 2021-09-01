@@ -1,42 +1,153 @@
+/* BODY */
 body {
-  margin: 0;
+  margin: 1.5%;
+  background-color: blue;
 }
 
-header {
-  height: 10vh;
-  display: flex;
-  justify-content: center;
+h1 {
+  color: white;
+  text-align: center;
 }
+
 #container-body{
   min-height: 90vh; /* this will fill up the screen */
   display: flex;
 }
 
+/* LEFT SIDE OF PAGE */
 .left {
+  border-radius: 3px;
   display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-flow: wrap;
   width: 25vw;
   background-color: lightblue;
+  margin-right: 1%;
+  padding: 1%;
+}
+
+.left-container {
+  width: 25vw;
 }
 
 h2 {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 6vh;
+  width: 15vw;
+  margin: auto;
+  padding: 1%;
+}
+
+input {
+  height: 5vh;
+  width: 2.5vw;
+  font-size: 16px;
+  text-align: center;
+  
+}  
+button {
+  height: 6vh;
+  height: 6vh;
 }
 
 .right {
-  display: flex;
-  align-items: flex-start;
+  border-radius: 3px;
   width: 75vw;
   background-color: lightgray;
+  margin-left: 1%;
 }
 
-.output-box {
+.left-header {
+  width: 100vw;
+}
+
+.outputBox {
+  width: 15%;
   border: 1px solid black;
-  width: 10%;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(217, 217, 230);
+  margin: 5%;
+  padding: 10px;
 }
 
+.title, .output {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid black;
+  width: 100%;
+  height: auto;
+  font-size: 20px;
+  margin: 0;
+  border: none;
+}
 
+@media only screen and (max-width: 600px) {
+  
+  /* BODY */
+  body {
+    background-color: lightgray;
+    margin: 0;
+  }
+
+  #container-body{
+    display: block;
+    margin: 0;
+  }
+
+  /* TOP */
+  .left {
+    height: 20vh;
+    background-color: lightblue;
+    margin: 0;
+    border: none;
+    position: relative;
+  }
+
+  .left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
+
+  .left-container {
+    width: 0 auto;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 12px;
+    height: 25px;
+    width: 25px;
+  }
+
+  button {
+    height: 25px;
+    width: 25px;
+  }
+  /* BOTTOM */
+  .right {
+    border: none;
+    background-color: purple;
+    margin: 0;
+  } 
+
+  .outputBox {
+    width: 100vw;
+    margin: 0;
+  }
+
+
+/* end of @media */
+} 
+/* end of @media */
 
 
