@@ -8,21 +8,14 @@ body {
 
 .left {
   width: 25vw;
-  background-color: lightgray;
+  background-color: lightblue;
 }
 
 .right {
   width: 75vw;
-  background-color: lightyellow;
+  background-color: lightgray;
 }
 
-.output {
-  display: flex;
-  height: 10vw;
-  width: 15vw;
-  border: 2px solid black;
-  overflow: hidden;
-  font-size: 2vw;
-}
+
 
 
