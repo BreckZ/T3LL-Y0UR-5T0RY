@@ -7,29 +7,49 @@ async function fetchData(num, category) {
   try {
     let result = await axios.get(`${baseUrl}${num}${endingUrl}`);  // this defines your axios <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     console.log(result);
-    let ageOutput = result.data.text;
-    displayResults(ageOutput, category);                                  // this calls the displayAgeResults function down below
+    let output = result.data.text;
+    let cat = category;
+    displayResults(output, category);                                // this calls the displayAgeResults function down below
   } catch (error) {
     console.log(error);
   }
 }
-
-
 
 // Handling the Input
 const ageInput = document.querySelector("#age");
 const ageButton = document.querySelector("#age-btn");
 ageButton.addEventListener("click", handleInput);
 
+const bmthInput = document.querySelector("#bmth");
+const bdayInput = document.querySelector("#bday");
+const bdayButton = document.querySelector("#bday-btn");
+bdayButton.addEventListener("click", handleInput);
+
 const yearInput = document.querySelector("#byear");
 const yearButton = document.querySelector("#year-btn");
 yearButton.addEventListener("click", handleInput);
 
-// add eventListener to ("click", handleInput)
+const hftInput = document.querySelector("#hft");
+const hinInput = document.querySelector("#hin");
+const heightButton = document.querySelector("#height-btn");
+heightButton.addEventListener("click", handleInput);
+
+const weightInput = document.querySelector("#lbs");
+const weightButton = document.querySelector("#weight-btn");
+weightButton.addEventListener("click", handleInput);
+
+const shoeInput = document.querySelector("#shoe");
+const shoeButton = document.querySelector("#shoe-btn");
+shoeButton.addEventListener("click", handleInput);
+
+const favInput = document.querySelector("#favNum");
+const favButton = document.querySelector("#fav-btn");
+favButton.addEventListener("click", handleInput);
+
 
 let category = "";
 
-function handleInput(e) {  // handleInput
+function handleInput(e) {
   e.preventDefault();
   if (e.target.id === "age-btn") {
     console.log(e.target.id);
@@ -38,57 +58,80 @@ function handleInput(e) {  // handleInput
     category = "Age";
     fetchData(age, category);
     ageInput.value = "";
+  } else if (e.target.id === "bday-btn") {
+    const bmonth = bmthInput.value;
+    const birthDay = bdayInput.value;
+    const birthDate = `${bmonth}/${birthDay}`
+    endingUrl = "/date?json"
+    category = "Birth Date";
+    fetchData(birthDate, category);
+    bmthInput.value = "";
+    bdayInput.value = "";
   } else if (e.target.id === "year-btn") {
-    console.log(e.target.id);
     const year = yearInput.value;
-    console.log(year);
     endingUrl = "/year?json"
     category = "Year";
     fetchData(year, category);
-    console.log(fetch);
     yearInput.value = "";
     console.log(yearInput);
-  } else {
-    console.log("hello")
+  } else if (e.target.id === "height-btn") {
+    let feet = hftInput.value * 12;
+    console.log(feet);
+    let inch = hinInput.value * 1;
+    const height = feet + inch;
+    endingUrl = "/?json"
+    category = "Height in Inches";
+    fetchData(height, category);
+    hftInput.value = "";
+    hinInput.value = "";
+  } else if (e.target.id === "weight-btn") {
+    const weight = weightInput.value;
+    endingUrl = "/?json"
+    category = "Weight";
+    fetchData(weight, category);
+    weightInput.value = "";
+  } else if (e.target.id === "shoe-btn") {
+    const shoeSize = shoeInput.value;
+    endingUrl = "/trivia?json"
+    category = "Shoe Size";
+    fetchData(shoeSize, category);
+    shoeInput.value = "";
+  } else if (e.target.id === "fav-btn") {
+    const favNum = favInput.value;
+    endingUrl = "/trivia?json"
+    category = "Favorite Number";
+    fetchData(favNum, category);
+    favInput.value = "";
+  }
+  else {
+    console.log("How did you do this?!")
   }
 }
 
-function removeAge() {
-  ageBox.innerHTML = "";
-}
 
-// Displaying the Age Input
+
 const rightBox = document.querySelector(".right");
+const outputBox = document.querySelector(".output-box");
+
 
 function displayResults(output, category) {
-  console.log(output);
-  let div = document.createElement("div")
-  div.classList.add("output");
-  div.innerText = `${category}: ${output}`;
+  let div = document.createElement("div");
+  div.classList.add("output-box");
   rightBox.append(div);
+
+  let p1 = document.createElement("p");
+  p1.classList.add("title");
+  p1.innerText = `${category}:`;
+  outputBox.append(p1);
+
+  console.log(div);
+  let p2 = document.createElement("p");
+  p2.classList.add("output")
+  p2.innerText = `${output}`;
+  console.log(output);
+  outputBox.append(p2);
 }
 
-// Handling the Birth Year Input
-// const yearInput = document.querySelector("#byear");
-// const yearButton = document.querySelector("#year-btn");
-// yearButton.addEventListener("click", handleYearInput);
-
-
-// function handleYearInput(e) {
-//   e.preventDefault();
-//   const byear = yearInput.value;
-//   endingUrl = "/year?json";
-//   fetchData(byear);
-//   yearInput.value = "";
-// }
-
-// Displaying the Birth Year Input
-// const yearBox = document.querySelector(".right");
-
-// function displayYearResults(yearOutput) {
-//   console.log(yearOutput);
-//   let yearDiv = document.createElement("div")
-//   yearDiv.classList.add("output");
-//   yearDiv.innerText = `Birth Year: ${yearOutput}`;
-//   yearBox.append(yearDiv);
-// }
+function removeOuput() {
+  // ageBox.innerHTML = "";
+}
