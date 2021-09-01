@@ -111,24 +111,23 @@ function handleInput(e) {
 
 
 const rightBox = document.querySelector(".right");
-const outputBox = document.querySelector(".output-box");
 
 
 function displayResults(output, category) {
   let div = document.createElement("div");
-  div.classList.add("output-box");
+  div.classList.add("outputBox");
   rightBox.append(div);
+
+  let outputBox = document.querySelector(".outputBox");
 
   let p1 = document.createElement("p");
   p1.classList.add("title");
   p1.innerText = `${category}:`;
   outputBox.append(p1);
 
-  console.log(div);
   let p2 = document.createElement("p");
   p2.classList.add("output")
   p2.innerText = `${output}`;
-  console.log(output);
   outputBox.append(p2);
 }
 

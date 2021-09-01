@@ -7,8 +7,8 @@ header {
   display: flex;
   justify-content: center;
 }
-#container {
-  min-height: 100vh; /* this will fill up the screen */
+#container-body{
+  min-height: 90vh; /* this will fill up the screen */
   display: flex;
 }
 
