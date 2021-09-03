@@ -1,5 +1,5 @@
 
-const baseUrl = "https://numbersapi.com/"
+const baseUrl = "http://numbersapi.com/"
 
 let endingUrl = "";
 
