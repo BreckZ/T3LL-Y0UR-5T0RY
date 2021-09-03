@@ -107,4 +107,6 @@ function handleInput(e) {
 
 ## Change Log
 
+The original design from the wireframes is different in the end product, but still similar.
+
 
