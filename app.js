@@ -1,5 +1,5 @@
 
-const baseUrl = "http://numbersapi.com/"
+const baseUrl = "https://boiling-mountain-84087.herokuapp.com/http://numbersapi.com/"
 
 let endingUrl = "";
 
