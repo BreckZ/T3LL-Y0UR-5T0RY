@@ -6,7 +6,6 @@ let endingUrl = "";
 async function fetchData(num, category) {
   try {
     let result = await axios.get(`${baseUrl}${num}${endingUrl}`);  // this defines your axios <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    console.log(result);
     let output = result.data.text;
     let cat = category;
     displayResults(output, category);                                // this calls the displayAgeResults function down below
@@ -46,13 +45,11 @@ const favInput = document.querySelector("#favNum");
 const favButton = document.querySelector("#fav-btn");
 favButton.addEventListener("click", handleInput);
 
-
 let category = "";
 
 function handleInput(e) {
   e.preventDefault();
   if (e.target.id === "age-btn") {
-    console.log(e.target.id);
     const age = ageInput.value;
     endingUrl = "/trivia?json";
     category = "Age";
@@ -73,10 +70,8 @@ function handleInput(e) {
     category = "Year";
     fetchData(year, category);
     yearInput.value = "";
-    console.log(yearInput);
   } else if (e.target.id === "height-btn") {
     let feet = hftInput.value * 12;
-    console.log(feet);
     let inch = hinInput.value * 1;
     const height = feet + inch;
     endingUrl = "/?json"
@@ -108,10 +103,7 @@ function handleInput(e) {
   }
 }
 
-
-
 const rightBox = document.querySelector(".right");        // if there is already an element in HTML you can use global scope
-
 
 function displayResults(output, category) {
   let div = document.createElement("div");
@@ -131,6 +123,6 @@ function displayResults(output, category) {
   div.append(p2);
 }
 
-function removeOuput() {
-  // ageBox.innerHTML = "";
-}
+// function removeOuput() {
+//   // ageBox.innerHTML = "";
+// }

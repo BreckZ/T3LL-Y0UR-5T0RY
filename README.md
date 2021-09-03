@@ -48,9 +48,9 @@ Mobile Design - https://imgur.com/KgKc1bQ
 |  Day | Deliverable | Status
 |---|---| ---|
 |Aug 28-29| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Aug 30| Project Approval / Core Application Structure (HTML,CSS. js) / API calls working properly | Incomplete
-|Aug 31| Pseudocode / actual code / functionality / MVP | Incomplete
-|Sep 1| Styling Styling and More Styling / Start Post-MVP | Incomplete
+|Aug 30| Project Approval / Core Application Structure (HTML,CSS. js) / API calls working properly | Complete
+|Aug 31| Pseudocode / actual code / functionality / MVP | Complete
+|Sep 1| Styling Styling and More Styling / Start Post-MVP | Complete
 |Sep 2| Post-MVP| Incomplete
 |Sep 3| Presentations | Incomplete
 
@@ -61,26 +61,50 @@ See following link https://imgur.com/GFj5v5E
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Design html layout | H | 3 hrs| 0 hrs| 0 hrs|
-| Give basic css styling | H | 3 hrs | 0 hrs | 0 hrs|
-| Make API calls for user inputs | H | 3 hrs | 0 hrs | 0 hrs |
-| Structure flexbox for design  | H | 3 hrs | 0 hrs | 0 hrs | 
-| Make API calls for number requests | H | 3 hrs | 0 hrs | 0 hrs |
-| Dynamic Javascript to interact with API | H | 3 hrs | 0 hrs | 0 hrs| 
-| Style input containers for desktop | H | 3 hrs| 0 hrs | 0 hrs |
-| HTML and CSS media query for mobile | H | 3 hrs | 0 hrs | 0 hrs |
-| Style input containers for mobile | H | 3 hrs | 0 hrs | 0 hrs |
-| Structure flexbox for mobile | M | 3 hrs| 0 hrs | 0 hrs |
-| Style search container with flexbox | M | 3 hrs | 0 hrs | 0 hrs |
-| Post MVP Random picture API based on user input | L | 3 hrs | 0 hrs | 0 hrs| 
+| Design html layout | H | 3 hrs | 3 hrs | 3 hrs |
+| Give basic css styling | H | 3 hrs | 3 hrs | 3 hrs |
+| Make API calls for user inputs | H | 3 hrs | 4 hrs | 4 hrs |
+| Structure flexbox for design | H | 3 hrs | 6 hrs | 6 hrs | 
+| Make API calls for number requests | H | 3 hrs | 2 hrs | 2 hrs |
+| Dynamic Javascript to interact with API | H | 3 hrs | 5 hrs | 5 hrs | 
+| Style input containers for desktop | H | 3 hrs | 4 hrs | 4 hrs |
+| HTML and CSS media query for mobile | H | 3 hrs | 4 hrs | 4 hrs |
+| Style input containers for mobile | H | 3 hrs | 1 hrs | 1 hrs |
+| Structure flexbox for mobile | M | 3 hrs | 3 hrs | 3 hrs |
+| Style search container with flexbox | M | 3 hrs | 2 hrs | 2 hrs |
+| Post MVP Random picture API based on user input | L | 3 hrs | 0 hrs | 0 hrs | 
 | Post MVP incorporate hover effects | L | 3 hrs | 0 hrs | 0 hrs |
-| Total | H | 39 hrs | 0 hrs | 0 hrs |
+| Total | H | 39 hrs | 37 hrs | 37 hrs |
 
 ## Code Snippet
- 
-Forthcoming
-    
+
+``` 
+function handleInput(e) {
+  e.preventDefault();
+  if (e.target.id === "age-btn") {
+    const age = ageInput.value;
+    endingUrl = "/trivia?json";
+    category = "Age";
+    fetchData(age, category);
+    ageInput.value = "";
+  } else if (e.target.id === "bday-btn") {
+    const bmonth = bmthInput.value;
+    const birthDay = bdayInput.value;
+    const birthDate = `${bmonth}/${birthDay}`
+    endingUrl = "/date?json"
+    category = "Birth Date";
+    fetchData(birthDate, category);
+    bmthInput.value = "";
+    bdayInput.value = "";
+  } else if (e.target.id === "year-btn") {
+    const year = yearInput.value;
+    endingUrl = "/year?json"
+    category = "Year";
+    fetchData(year, category);
+    yearInput.value = "";
+  }
+```    
 
 ## Change Log
- 
-Forthcoming 
+
+
