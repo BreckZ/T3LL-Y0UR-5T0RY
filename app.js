@@ -86,7 +86,7 @@ function handleInput(e) {
     hinInput.value = "";
   } else if (e.target.id === "weight-btn") {
     const weight = weightInput.value;
-    endingUrl = "/?json"
+    endingUrl = "/trivia?json"
     category = "Weight";
     fetchData(weight, category);
     weightInput.value = "";

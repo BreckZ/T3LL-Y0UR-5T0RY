@@ -7,7 +7,6 @@ body {
   width: auto;
   height: auto;
   margin: 0;
-
 }
 
 h1 {
@@ -16,6 +15,7 @@ h1 {
   text-align: center;
   font-size: 45px;
   margin-top: 1%;
+  text-shadow: 3px 3px 5px lightskyblue;
 }
 
 #container-body{
@@ -76,6 +76,7 @@ input {
   margin: 0 2px 0 2px;
 }  
 button {
+  /* text-shadow: 2px 2px 4px black; */
   border: none;
   background-color: white;
   height: 5.5vh;
@@ -83,15 +84,19 @@ button {
 }
 
 
+
 /* RIGHT SIDE OF PAGE */
 .right {
   background-image: url("./book-on-map.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   border-radius: 3px;
   max-height: fit-content;
-  height: 80vh;
+  height: 75vh;
   width: 75vw;
   margin-left: 1%;
   margin-right: 2%;
@@ -229,7 +234,7 @@ button {
 /* end of @media mobile */
 
 
-@media screen
+/* @media screen
  and (min-device-width: 1200px)
  and (max-device-width: 1600px)
  and (-webkit-min-device-pixel-ratio: 1) {
@@ -238,4 +243,4 @@ button {
   width: 500px;
 }
 
-}
+} */
